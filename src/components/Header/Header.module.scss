@@ -1,0 +1,55 @@
+@import '../../../styles/variables';
+
+.header {
+	display: flex;
+	align-items: center;
+	// background-color: black;
+	padding: 20px;
+	width: 100%;
+	border-bottom: 1px solid #F3F3F3;
+	box-sizing: border-box;
+}
+
+.form {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.search {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	gap: 50px;
+}
+
+.text {
+	color: $label-gray;
+	min-width: fit-content;
+	font-weight: 400;
+}
+
+.input {
+	border: 1px solid $border-gray;
+	border-radius: 5px;
+	max-width: 500px;
+	width: 100%;
+	outline: none;
+	box-sizing: border-box;
+	height: 30px;
+	padding: 0 10px;
+}
+
+.button {
+	box-sizing: border-box;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	padding: 0 5px;
+	color: $main-white;
+	font-size: 12px;
+	border-radius: 5px;
+	background-color: $main-blue;
+}
