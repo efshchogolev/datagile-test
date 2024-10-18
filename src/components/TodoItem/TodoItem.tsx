@@ -5,7 +5,8 @@ const TodoItem = () => {
   return (
     <li className={s.listItem}>
       <label className={s.itemLabel}>
-        <input type="checkbox" className={s.checkbox}></input>
+        {/* TODO: name/id */}
+        <input type="checkbox" className={s.checkbox} name="" id=""></input>
         <span className={s.itemText}>Задача</span>
       </label>
       <button className={s.deleteButton}>

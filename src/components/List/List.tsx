@@ -5,6 +5,11 @@ const List = () => {
   return (
     <ul className={s.list}>
       <TodoItem />
+      <TodoItem />
+      <TodoItem />
+      <TodoItem />
+      <TodoItem />
+      <TodoItem />
     </ul>
   )
 }

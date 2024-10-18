@@ -1,0 +1,61 @@
+@import '../../../styles/variables';
+
+.statusesContainer {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	width: 100%;
+	padding: $side-padding;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.buttonsContainer {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+.radioLabel {
+	display: flex;
+	align-items: center;
+}
+
+.radioButton {
+	margin: 0;
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+}
+
+.optionTitle {
+	align-self: flex-start;
+	color: $label-gray;
+	width: 25%;
+	min-width: fit-content;
+	margin-right: 5px;
+}
+
+.text {
+	color: $light-black;
+	font-size: 14px;
+}
+
+
+.sortingContainer {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	width: 100%;
+	padding: $side-padding;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.select {
+	height: 30px;
+	width: 200px;
+	border-radius: 5px;
+	border: 1px solid $border-gray;
+	padding: 0 10px;
+}
