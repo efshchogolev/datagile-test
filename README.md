@@ -1,50 +1,24 @@
-# React + TypeScript + Vite
+# Тестовое задание для компании Datagile (Datagile Test)
+***Cроки: 1 неделя***
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+***Задание:***
 
-Currently, two official plugins are available:
+Написать приложение-форму для создания списка задач TODO, где стили контролов и разметка должны примерно соответствовать макету.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Макет](https://github.com/efshchogolev/datagile-test/blob/main/design.png?raw=true)
 
-## Expanding the ESLint configuration
+Можно использовать дефолтные стили радиокнопок и чекбоксов.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+**Форма состоит из следующих элементов:**
+1. область добавления задачи (поле ввода и кнопка Добавить)
+2. область списка задач с чекбоксами для завершения и пиктограммами удаления задачи
+3. поле фильтра по статусу задачи, состоящее из группы радиокнопок: Все/Активные/Завершенные. По-умолчанию – Все.
+4. поле вида сортировки задач, состоящее из выпадающего списка с двумя опциями: Наименование и Статус. По-умолчанию – Наименование.
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+**Доп. Условия:**
+1. Управление состоянием списка реализовать с помощью react-redux или redux toolkit (RTK)
+2. Настроить изменение стилей кнопки Добавить:
+- при наведении мыши (hover) её цвет должен быть светлее
+- при клике на кнопку (action) её цвет должен быть темнее
+3. Использовать TypeScript для типизации констант/переменных.
+4. Проект разместить на гитхабе, в личном аккаунте
