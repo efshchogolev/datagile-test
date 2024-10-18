@@ -1,0 +1,45 @@
+@import '../../../styles/variables';
+
+@mixin bordered-container($left: true) {
+	border: 1px solid $border-gray;
+	border-radius: 5px;
+	width: 100%;
+
+	@if $left {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+		border-right-width: 0.5px;
+	}
+
+	@else {
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		border-left-width: 0.5px;
+	}
+}
+
+.todos {
+	width: 100%;
+	padding: $side-padding;
+}
+
+.title {
+	color: $light-black;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+
+.mainContainer {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+
+.tasksContainer {
+	@include bordered-container();
+}
+
+.settingsContainer {
+	@include bordered-container(false);
+}

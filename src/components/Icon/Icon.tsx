@@ -5,8 +5,8 @@ import Add from '../../icons/add.svg?react'
  type IconProps = {
 		name: 'delete'|'add'
 		className?: string
-		width: number
-		height: number
+		width: number | string
+		height: number| string
 	}
 
 const Icon = (props: IconProps) => {

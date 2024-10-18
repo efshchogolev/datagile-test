@@ -1,0 +1,46 @@
+@import '../../../styles/variables';
+
+.listItem {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+}
+
+.itemText {
+	color: $light-black;
+	font-size: 14px;
+}
+
+.checkbox {
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+
+	&:checked+.itemText {
+		text-decoration: line-through;
+	}
+}
+
+.deleteButton {
+	height: 30px;
+	width: 30px;
+	padding: 0;
+	flex-shrink: 0;
+	background-color: $main-white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2);
+}
+
+.deleteIcon * {
+	fill: #5D5C64;
+}
+
+.itemLabel {
+	width: 100%;
+	cursor: pointer;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
