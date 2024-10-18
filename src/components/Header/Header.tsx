@@ -29,7 +29,7 @@ const Header = () => {
             onChange={handleSetText}
           ></input>
         </label>
-        <button className={s.button}>
+        <button className={s.button} type="submit">
           <Icon width={20} height={20} name="add" /> Добавить
         </button>
       </form>
