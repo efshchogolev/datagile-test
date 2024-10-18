@@ -1,15 +1,34 @@
+import { useAppDispatch } from '../../hooks/redux'
+import { deleteTodo, toggleTodo } from '../../store/slices/TodosSlice'
 import Icon from '../Icon/Icon'
 import s from './TodoItem.module.scss'
+import { ItodoItemProps } from '../../@types'
 
-const TodoItem = () => {
+const TodoItem = (props: ItodoItemProps) => {
+  const { id, itemText, completed } = props
+
+  const handleToggleTodo = () => {
+    dispatch(toggleTodo({ id }))
+  }
+  const handleDeleteTodo = () => {
+    dispatch(deleteTodo({ id }))
+  }
+
+  const dispatch = useAppDispatch()
   return (
     <li className={s.listItem}>
       <label className={s.itemLabel}>
-        {/* TODO: name/id */}
-        <input type="checkbox" className={s.checkbox} name="" id=""></input>
-        <span className={s.itemText}>Задача</span>
+        <input
+          type="checkbox"
+          checked={completed}
+          className={s.checkbox}
+          name={id}
+          id={id}
+          onChange={handleToggleTodo}
+        ></input>
+        <span className={s.itemText}>{itemText}</span>
       </label>
-      <button className={s.deleteButton}>
+      <button className={s.deleteButton} onClick={handleDeleteTodo}>
         <Icon
           name="delete"
           width={'80%'}
