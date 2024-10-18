@@ -54,4 +54,14 @@
 	font-size: 12px;
 	border-radius: 5px;
 	background-color: $main-blue;
+
+	transition: background-color .3s ease-in-out;
+
+	&:hover {
+		background-color: lighten($main-blue, 10%);
+	}
+
+	&:active {
+		background-color: darken($main-blue, 10%);
+	}
 }
