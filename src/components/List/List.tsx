@@ -26,14 +26,14 @@ const List = () => {
         setEditedTodos(
           handleSortTodos(
             todos.filter((todo) => !todo.completed),
-            'name',
+            sorting,
           ),
         )
       } else if (filter === 'completed') {
         setEditedTodos(
           handleSortTodos(
             todos.filter((todo) => todo.completed),
-            'name',
+            sorting,
           ),
         )
       } else {
