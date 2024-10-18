@@ -1,8 +1,8 @@
 import { ChangeEvent, FormEvent, useState } from 'react'
 import Icon from '../Icon/Icon'
 import s from './Header.module.scss'
-import { useAppDispatch } from '../../hooks/redux'
-import { addTodo } from '../../store/slices/TodosSlice'
+import { useAppDispatch } from '@/hooks/redux'
+import { addTodo } from '@/store/slices/TodosSlice'
 
 const Header = () => {
   const [text, setText] = useState<string>('')

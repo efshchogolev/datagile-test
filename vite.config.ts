@@ -6,7 +6,7 @@ import svgr from 'vite-plugin-svgr'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(),svgr()],
+  plugins: [react(), svgr()],
   css: {
     modules: {
       generateScopedName: (className, filePath) => {
@@ -18,6 +18,11 @@ export default defineConfig({
           .substring(0, 5)
         return `${fileName}__${className}_${hash}`
       },
+    },
+  },
+  resolve: {
+    alias: {
+      '@': '/src',
     },
   },
 })

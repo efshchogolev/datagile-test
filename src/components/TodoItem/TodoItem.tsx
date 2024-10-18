@@ -1,8 +1,8 @@
-import { useAppDispatch } from '../../hooks/redux'
-import { deleteTodo, toggleTodo } from '../../store/slices/TodosSlice'
+import { useAppDispatch } from '@/hooks/redux'
+import { deleteTodo, toggleTodo } from '@/store/slices/TodosSlice'
 import Icon from '../Icon/Icon'
 import s from './TodoItem.module.scss'
-import { ItodoItemProps } from '../../@types'
+import { ItodoItemProps } from '@/@types'
 
 const TodoItem = (props: ItodoItemProps) => {
   const { id, itemText, completed } = props

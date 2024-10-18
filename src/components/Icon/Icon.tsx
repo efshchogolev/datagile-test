@@ -1,7 +1,7 @@
 /// <reference types="vite-plugin-svgr/client" />
-import Delete from '../../icons/delete.svg?react'
-import Add from '../../icons/add.svg?react'
-import { IconProps } from '../../@types'
+import Delete from '@/icons/delete.svg?react'
+import Add from '@/icons/add.svg?react'
+import { IconProps } from '@/@types'
 
 const Icon = (props: IconProps) => {
   switch (props.name) {

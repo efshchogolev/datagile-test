@@ -1,8 +1,8 @@
 import { useLayoutEffect, useState } from 'react'
-import { useAppSelector } from '../../hooks/redux'
+import { useAppSelector } from '@/hooks/redux'
 import TodoItem from '../TodoItem/TodoItem'
 import s from './List.module.scss'
-import { ITodo } from '../../@types'
+import { ITodo } from '@/@types'
 
 const List = () => {
   const todos = useAppSelector((state) => state.todos.list)

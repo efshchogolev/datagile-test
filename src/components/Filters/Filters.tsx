@@ -1,7 +1,7 @@
-import { useAppDispatch, useAppSelector } from '../../hooks/redux'
+import { useAppDispatch, useAppSelector } from '@/hooks/redux'
 import s from './Filters.module.scss'
-import { setSorting } from '../../store/slices/TodosSlice'
-import { RadioButton as RadioButtonType } from '../../@types'
+import { setSorting } from '@/store/slices/TodosSlice'
+import { RadioButton as RadioButtonType } from '@/@types'
 import RadioButton from '../RadioButton/RadioButton'
 
 const Filters = () => {
@@ -29,7 +29,7 @@ const Filters = () => {
         <span className={s.optionTitle}>Статус</span>
         <div className={s.buttonsContainer}>
           {radioButtons.map((button) => (
-            <RadioButton {...button} />
+            <RadioButton {...button} key={button.value} />
           ))}
         </div>
       </div>

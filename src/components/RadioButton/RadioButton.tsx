@@ -1,8 +1,8 @@
 import React, { ChangeEvent } from 'react'
-import { RadioButton as RadioButtonProps } from '../../@types'
+import { RadioButton as RadioButtonProps } from '@/@types'
 import s from './RadioButton.module.scss'
-import { setFilter } from '../../store/slices/TodosSlice'
-import { useAppDispatch, useAppSelector } from '../../hooks/redux'
+import { setFilter } from '@/store/slices/TodosSlice'
+import { useAppDispatch, useAppSelector } from '@/hooks/redux'
 
 const RadioButton = (props: RadioButtonProps) => {
   const { value, labelText } = props
