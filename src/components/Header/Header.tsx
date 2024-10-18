@@ -27,6 +27,7 @@ const Header = () => {
             className={s.input}
             value={text}
             onChange={handleSetText}
+            minLength={1}
           ></input>
         </label>
         <button className={s.button} type="submit">
