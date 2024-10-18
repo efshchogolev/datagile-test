@@ -1,57 +1,36 @@
-import { ChangeEvent } from 'react'
 import { useAppDispatch, useAppSelector } from '../../hooks/redux'
 import s from './Filters.module.scss'
-import { setFilter, setSorting } from '../../store/slices/TodosSlice'
+import { setSorting } from '../../store/slices/TodosSlice'
+import { RadioButton as RadioButtonType } from '../../@types'
+import RadioButton from '../RadioButton/RadioButton'
 
 const Filters = () => {
-  const filter = useAppSelector((state) => state.todos.filter)
   const sorting = useAppSelector((state) => state.todos.sorting)
   const dispatch = useAppDispatch()
 
-  const handleSetFilter = (e: ChangeEvent<HTMLInputElement>) => {
-    dispatch(setFilter({ filter: e.target.value }))
-  }
+  const radioButtons: RadioButtonType[] = [
+    {
+      labelText: 'Все',
+      value: 'all',
+    },
+    {
+      labelText: 'Активные',
+      value: 'active',
+    },
+    {
+      labelText: 'Завершённые',
+      value: 'completed',
+    },
+  ]
+
   return (
     <>
       <div className={s.statusesContainer}>
         <span className={s.optionTitle}>Статус</span>
         <div className={s.buttonsContainer}>
-          <label className={s.radioLabel}>
-            <input
-              type="radio"
-              name="status"
-              value={'all'}
-              id="all"
-              className={s.radioButton}
-              checked={filter === 'all'}
-              onChange={handleSetFilter}
-            />
-            <span className={s.text}>Все</span>
-          </label>
-          <label className={s.radioLabel}>
-            <input
-              type="radio"
-              name="status"
-              id="active"
-              className={s.radioButton}
-              value={'active'}
-              checked={filter === 'active'}
-              onChange={handleSetFilter}
-            />
-            <span className={s.text}>Активные</span>
-          </label>
-          <label className={s.radioLabel}>
-            <input
-              type="radio"
-              name="status"
-              id="completed"
-              className={s.radioButton}
-              value={'completed'}
-              checked={filter === 'completed'}
-              onChange={handleSetFilter}
-            />
-            <span className={s.text}>Завершенные</span>
-          </label>
+          {radioButtons.map((button) => (
+            <RadioButton {...button} />
+          ))}
         </div>
       </div>
       <div className={s.sortingContainer}>

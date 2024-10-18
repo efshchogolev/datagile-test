@@ -27,3 +27,8 @@ export type addTodoPayload = {
   text: string
   id: string
 }
+
+export interface RadioButton {
+  labelText: string
+  value: string
+}

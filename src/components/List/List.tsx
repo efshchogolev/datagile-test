@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useLayoutEffect, useState } from 'react'
 import { useAppSelector } from '../../hooks/redux'
 import TodoItem from '../TodoItem/TodoItem'
 import s from './List.module.scss'
@@ -20,20 +20,20 @@ const List = () => {
     )
   }
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const handleEditTodoList = (filter: string, sorting: string) => {
       if (filter === 'active') {
         setEditedTodos(
           handleSortTodos(
             todos.filter((todo) => !todo.completed),
-            sorting,
+            'name',
           ),
         )
       } else if (filter === 'completed') {
         setEditedTodos(
           handleSortTodos(
             todos.filter((todo) => todo.completed),
-            sorting,
+            'name',
           ),
         )
       } else {

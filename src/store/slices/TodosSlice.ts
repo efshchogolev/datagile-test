@@ -4,9 +4,19 @@ import { addTodoPayload, TodoState } from '../../@types'
 const initialState: TodoState = {
   list: [
     {
+      completed: true,
+      id: new Date().toISOString() + 1,
+      text: 'Купить молока',
+    },
+    {
+      completed: true,
+      id: new Date().toISOString() + 2,
+      text: 'Погулять с собакой',
+    },
+    {
       completed: false,
       id: new Date().toISOString(),
-      text: 'задача',
+      text: 'Выспаться',
     },
   ],
   filter: 'all',
