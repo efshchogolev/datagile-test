@@ -29,11 +29,12 @@
 }
 
 .optionTitle {
-	align-self: flex-start;
 	color: $label-gray;
 	width: 25%;
 	min-width: fit-content;
 	margin-right: 5px;
+	font-size: 16px;
+	font-weight: 500;
 }
 
 .text {
