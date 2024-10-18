@@ -1,5 +1,5 @@
 @font-face {
-  src: url(@/fonts/Roboto-Light.woff) format('ttf');
+  src: url(@/fonts/Roboto-Light.ttf) format('ttf');
   font-family: 'Roboto';
   font-weight: 300;
 }

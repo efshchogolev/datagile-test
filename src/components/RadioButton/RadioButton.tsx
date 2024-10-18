@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from 'react'
+import { ChangeEvent } from 'react'
 import { RadioButton as RadioButtonProps } from '@/@types'
 import s from './RadioButton.module.scss'
 import { setFilter } from '@/store/slices/TodosSlice'
