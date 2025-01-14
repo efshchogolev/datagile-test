@@ -1,24 +1,30 @@
-# Тестовое задание для компании Datagile (Datagile Test)
-***Cроки: 1 неделя***
+# Test task for Datagile (Datagile Test)
+***Timeline: 1 week***
 
-***Задание:***
+***Task:***
 
-Написать приложение-форму для создания списка задач TODO, где стили контролов и разметка должны примерно соответствовать макету.
+Develop a TODO list application form where the styles of controls and layout should roughly match the design.
 
-![Макет](https://github.com/efshchogolev/datagile-test/blob/main/design.png?raw=true)
+![Design](https://github.com/efshchogolev/datagile-test/blob/main/design.png?raw=true)
 
-Можно использовать дефолтные стили радиокнопок и чекбоксов.
+Default styles for radio buttons and checkboxes can be used.
 
-**Форма состоит из следующих элементов:**
-1. область добавления задачи (поле ввода и кнопка Добавить)
-2. область списка задач с чекбоксами для завершения и пиктограммами удаления задачи
-3. поле фильтра по статусу задачи, состоящее из группы радиокнопок: Все/Активные/Завершенные. По-умолчанию – Все.
-4. поле вида сортировки задач, состоящее из выпадающего списка с двумя опциями: Наименование и Статус. По-умолчанию – Наименование.
+### **The form consists of the following elements:**
 
-**Доп. Условия:**
-1. Управление состоянием списка реализовать с помощью react-redux или redux toolkit (RTK)
-2. Настроить изменение стилей кнопки Добавить:
-- при наведении мыши (hover) её цвет должен быть светлее
-- при клике на кнопку (action) её цвет должен быть темнее
-3. Использовать TypeScript для типизации констант/переменных.
-4. Проект разместить на гитхабе, в личном аккаунте
+1. **Task addition area**: 
+   - An input field and an "Add" button.
+2. **Task list area**: 
+   - A list of tasks with checkboxes for completion and icons for deleting tasks.
+3. **Task status filter**: 
+   - A group of radio buttons for filtering tasks by status: All/Active/Completed. The default is "All."
+4. **Task sorting field**: 
+   - A dropdown menu with two options: "Name" and "Status." The default is "Name."
+
+### **Additional Conditions:**
+
+1. Manage the list state using **react-redux** or **redux toolkit (RTK)**.
+2. Configure button styles for the "Add" button:
+   - On hover, the button's color should lighten.
+   - On click (action), the button's color should darken.
+3. Use **TypeScript** to type constants/variables.
+4. Host the project on GitHub in your personal account.
