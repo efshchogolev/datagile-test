@@ -1,5 +1,5 @@
 # Test task for Datagile (Datagile Test)
-***Timeline: 1 week***
+***Deadline: 1 week***
 
 ***Task:***
 
